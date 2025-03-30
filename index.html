@@ -6,13 +6,16 @@
     <title>Portfólio Power BI</title>
     <link rel="icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/New_Power_BI_Logo.svg/630px-New_Power_BI_Logo.svg.png">
     <style>
+        /* Estilos gerais */
         body {
             background-color: rgb(3, 0, 34);
             margin: 0;
             padding: 0;
             font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
         }
---- k
+
+        /* Barra fixa */
         .barrafixa {
             position: fixed;
             top: 0;
@@ -28,17 +31,17 @@
             background-repeat: no-repeat;
             background-position: 25px center;
             background-size: 55px 55px;
-            font-family:Georgia, 'Times New Roman', Times, serif
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         h1 {
             margin-top: 100px;  
             margin-bottom: 40px;
             color: white;
-            text-align: center;
-            font-size: 60px;
+            font-size: 50px;
         }
 
+        /* Seção sobre */
         #sobre {
             display: flex;
             flex-direction: column;
@@ -51,118 +54,133 @@
             justify-content: center;
             align-items: flex-start;
             gap: 20px; 
+            flex-wrap: wrap;
+            max-width: 1000px;
         }
 
+        /* Imagens */
         .imagem {
             border: 5px solid hwb(234 0% 71%);
             border-radius: 15px;
             box-shadow: 0 0 15px 5px hwb(234 0% 71%);
+            transition: transform 0.3s ease-in-out;
         }
 
-        #imagem1 {
-            width: 950px;
-        }
-
-        #imagem2 {
-            width: 500px;
-            margin-top: 150px;
-            display: block;
+        .imagem:hover {
+            transform: scale(1.05);
         }
 
         .imagem-titulo {
-            width: 1000px;
-            height: auto;
+            width: 90%;
+            max-width: 1000px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px 5px hwb(234 0% 71%);
         }
 
         .Box1 {
-            width: 450px;
+            width: 90%;
+            max-width: 450px;
             color: white;
             font-size: 22px;
             line-height: 1.4;
-            margin-top: 150px
+            margin-top: 20px;
         }
 
         .Texto2 {
             font-size: 40px;
+            color: white;
         }
-        .imagem-titulo{border: 5px solid hwb(234 0% 71%);
-            border-radius: 15px;
-            box-shadow: 0 0 15px 5px hwb(234 0% 71%);}
 
+        /* Rodapé */
         .rodape {
-        width: 100%;
-        background-color: rgb(1, 0, 41);
-        color: white;
-        text-align: center;
-        font-size: 18px;
-        padding: 15px 0;
-        font-family: Arial, sans-serif;
-        margin-top: 50px;
+            width: 100%;
+            background-color: rgb(1, 0, 41);
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px 0;
+            margin-top: 50px;
         }
 
         .rodape .logo {
-            width: 40px; 
+            width: 40px;
             height: auto;
-            margin: 5px; 
-            vertical-align: middle; 
+            margin: 5px;
+            vertical-align: middle;
         }
 
+        /* Responsividade */
+        @media (max-width: 768px) {
+            .barrafixa {
+                font-size: 30px;
+                padding-left: 80px;
+                height: 65px;
+                line-height: 65px;
+            }
+
+            h1 {
+                font-size: 36px;
+            }
+
+            .Box1 {
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .Texto2 {
+                font-size: 30px;
+            }
+
+            .imagem {
+                width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
     <div class="barrafixa">Portfólio Power BI</div>
     <h1>Portfólio de Projetos no Power BI</h1>
-    <p style="color: white;
-        width: 700px;
-            color: white;
-            font-size: 22px;
-            margin: 0 auto;
-            text-align: center;">Estou em constante aprendizado na área de análise de dados, desenvolvendo projetos no Power BI para criar dashboards interativos que facilitam a visualização e interpretação de informações. Busco aprimorar minhas habilidades e aplicar meus conhecimentos em diferentes setores.</p>
+
+    <p style="color: white; width: 90%; max-width: 700px; font-size: 22px; margin: 0 auto; text-align: center;">
+        Estou em constante aprendizado na área de análise de dados, desenvolvendo projetos no Power BI para criar dashboards interativos que facilitam a visualização e interpretação de informações.
+    </p>
+
     <section id="sobre">
-        <img id="imagem1" class="imagem" src="https://addepto.com/wp-content/uploads/2022/05/background-images_www-3.webp" alt="Imagem Power BI">
+        <img class="imagem" src="imagens/Sem título.jpg" alt="Imagem Power BI">
+        
         <div class="flex-container">
-            <img id="imagem2" class="imagem" src="https://www.finitetek.com/wp-content/uploads/2024/08/img1-1.jpg" alt="Imagem Power BI">
+            <img class="imagem" src="imagens/Relatório Hasthtag.jpg" alt="Imagem Power BI">
             <div class="Box1">
                 <p>Portfólio de Projetos em Power BI - Dashboards de diversas áreas desenvolvidos para a tomada de decisão.</p>
                 <p>Essa página contém meus 3 Dashboards realizados:</p>
-                <p style="font-weight: bold; color: white;">Os Dashboards estão em formato de imagem, não é possivel interagir.</p>
+                <p style="font-weight: bold; color: white;">Os Dashboards estão em formato de imagem, não é possível interagir.</p>
             </div>
         </div>
+
         <h1 class="Texto2">Dashboard de Gestão de Vendas</h1>
-        <p style="color: white;
-        width: 900px;
-            color: white;
-            font-size: 22px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 35px">Voltado para o monitoramento detalhado do desempenho de vendas, esse dashboard oferece informações sobre faturamento por método de pagamento, faturamento por loja, faturamento por período, além de uma análise detalhada de produtos, ticket médio e filtros interativos que permitem segmentações personalizadas.</p>
-        <img class="imagem-titulo" src="Sem título.jpg" alt="Imagem Power BI">
+        <p style="color: white; width: 90%; max-width: 900px; font-size: 22px; margin: 0 auto; text-align: center;">
+            Monitoramento detalhado do desempenho de vendas, com informações sobre faturamento, ticket médio e análise de produtos.
+        </p>
+        <img class="imagem-titulo" src="imagens/Sem título.jpg" alt="Dashboard de Vendas">
 
         <h1 class="Texto2">Dashboard Comercial</h1>
-        <p style="color: white;
-        width: 900px;
-            color: white;
-            font-size: 22px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 35px">Focado em análise financeira e comercial, este painel apresenta a receita total, o número de clientes, a quantidade de produtos vendidos e o total de vendas por gênero. Com gráficos detalhados, permite uma visão clara da performance das vendas e auxilia na tomada de decisões estratégicas para impulsionar os resultados.</p>
-        <img class="imagem-titulo" src="Relatório Hasthtag.jpg" alt="Imagem Power BI">
+        <p style="color: white; width: 90%; max-width: 900px; font-size: 22px; margin: 0 auto; text-align: center;">
+            Análise financeira e comercial, apresentando receita total, número de clientes e total de vendas por categoria.
+        </p>
+        <img class="imagem-titulo" src="imagens/Relatório Hasthtag.jpg" alt="Dashboard Comercial">
 
         <h1 class="Texto2">Dashboard da Netflix</h1>
-        <p style="color: white;
-        width: 900px;
-            color: white;
-            font-size: 22px;
-            margin: 0 auto;
-            text-align: center;
-            margin-bottom: 35px">Esse dashboard analisa dados de assinantes da Netflix, trazendo uma visão clara sobre a distribuição dos planos de assinatura, os gêneros mais assistidos, o engajamento por região e a porcentagem de pagamentos atrasados. Através de visualizações intuitivas, é possível entender melhor o comportamento dos usuários e os padrões de consumo de conteúdo na plataforma.</p>
-        <img class="imagem-titulo" src="Relatório 3.jpg" alt="Imagem Power BI">
-        <footer class="rodape">
-            <p>Site desenvolvido com</p>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" class="logo">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo" class="logo">
-            <p>© 2025 Daniel Matias Santos</p>
-        </footer>
+        <p style="color: white; width: 90%; max-width: 900px; font-size: 22px; margin: 0 auto; text-align: center;">
+            Análise dos assinantes da Netflix, distribuição de planos, gêneros mais assistidos e engajamento por região.
+        </p>
+        <img class="imagem-titulo" src="imagens/Relatório 3.jpg" alt="Dashboard Netflix">
     </section>
+
+    <footer class="rodape">
+        <p>Site desenvolvido com</p>
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" class="logo">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3 Logo" class="logo">
+        <p>© 2025 Daniel Matias Santos</p>
+    </footer>
 </body>
-</html>' 
+</html>
