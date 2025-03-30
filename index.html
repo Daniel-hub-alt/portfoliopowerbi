@@ -28,7 +28,7 @@
             background-repeat: no-repeat;
             background-position: 25px center;
             background-size: 55px 55px;
-            font-family:Georgia, 'Times New Roman', Times, serif
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
 
         h1 {
@@ -51,6 +51,7 @@
             justify-content: center;
             align-items: flex-start;
             gap: 20px; 
+            flex-wrap: wrap;  /* Adicionado para flexionar em telas menores */
         }
 
         .imagem {
@@ -61,17 +62,20 @@
 
         #imagem1 {
             width: 950px;
+            max-width: 100%;
         }
 
         #imagem2 {
             width: 500px;
             margin-top: 150px;
             display: block;
+            max-width: 100%;  /* Adicionado para responsividade */
         }
 
         .imagem-titulo {
             width: 1000px;
             height: auto;
+            max-width: 100%;  /* Adicionado para responsividade */
         }
 
         .Box1 {
@@ -79,25 +83,23 @@
             color: white;
             font-size: 22px;
             line-height: 1.4;
-            margin-top: 150px
+            margin-top: 150px;
+            max-width: 100%; /* Adicionado para responsividade */
         }
 
         .Texto2 {
             font-size: 40px;
         }
-        .imagem-titulo{border: 5px solid hwb(234 0% 71%);
-            border-radius: 15px;
-            box-shadow: 0 0 15px 5px hwb(234 0% 71%);}
 
         .rodape {
-        width: 100%;
-        background-color: rgb(1, 0, 41);
-        color: white;
-        text-align: center;
-        font-size: 18px;
-        padding: 15px 0;
-        font-family: Arial, sans-serif;
-        margin-top: 50px;
+            width: 100%;
+            background-color: rgb(1, 0, 41);
+            color: white;
+            text-align: center;
+            font-size: 18px;
+            padding: 15px 0;
+            font-family: Arial, sans-serif;
+            margin-top: 50px;
         }
 
         .rodape .logo {
@@ -107,6 +109,65 @@
             vertical-align: middle; 
         }
 
+        /* Media Query para telas pequenas */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 40px; /* Reduzido o tamanho da fonte do título */
+            }
+
+            .flex-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+
+            .imagem, .imagem-titulo {
+                width: 100%;
+                max-width: 100%;
+                height: auto;
+            }
+
+            .Box1 {
+                width: 100%;
+                font-size: 20px;
+                margin-top: 20px;
+            }
+
+            #imagem1, #imagem2 {
+                width: 90%;
+            }
+        }
+
+        /* Media Query para telas ainda menores (exemplo: smartphones) */
+        @media (max-width: 480px) {
+            .barrafixa {
+                font-size: 30px;
+                padding-left: 50px;
+            }
+
+            h1 {
+                font-size: 35px; /* Reduzido ainda mais para telas pequenas */
+            }
+
+            .Box1 {
+                font-size: 18px; /* Ajuste de fonte para telas pequenas */
+                margin-top: 20px;
+                width: 90%;
+            }
+
+            .rodape {
+                font-size: 16px;
+            }
+
+            #imagem1, #imagem2 {
+                width: 100%;
+            }
+
+            .flex-container {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
     </style>
 </head>
 <body>
