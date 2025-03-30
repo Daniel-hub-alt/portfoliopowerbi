@@ -51,7 +51,7 @@
             justify-content: center;
             align-items: flex-start;
             gap: 20px; 
-            flex-wrap: wrap;  /* Adicionado para flexionar em telas menores */
+            flex-wrap: wrap;
         }
 
         .imagem {
@@ -69,13 +69,13 @@
             width: 500px;
             margin-top: 150px;
             display: block;
-            max-width: 100%;  /* Adicionado para responsividade */
+            max-width: 100%;
         }
 
         .imagem-titulo {
             width: 1000px;
             height: auto;
-            max-width: 100%;  /* Adicionado para responsividade */
+            max-width: 100%;
         }
 
         .Box1 {
@@ -84,7 +84,7 @@
             font-size: 22px;
             line-height: 1.4;
             margin-top: 150px;
-            max-width: 100%; /* Adicionado para responsividade */
+            max-width: 100%;
         }
 
         .Texto2 {
@@ -123,36 +123,36 @@
 
             .imagem, .imagem-titulo {
                 width: 100%;
-                max-width: 100%;
                 height: auto;
             }
 
             .Box1 {
-                width: 100%;
+                width: 90%; /* Ajuste para telas pequenas */
                 font-size: 20px;
                 margin-top: 20px;
             }
 
             #imagem1, #imagem2 {
-                width: 90%;
+                width: 100%;
+                margin-top: 20px; /* Melhorando o espaçamento */
+            }
+
+            .barrafixa {
+                font-size: 30px;
+                padding-left: 20px; /* Ajustando o título na barra fixa */
             }
         }
 
         /* Media Query para telas ainda menores (exemplo: smartphones) */
         @media (max-width: 480px) {
-            .barrafixa {
-                font-size: 30px;
-                padding-left: 50px;
-            }
-
             h1 {
-                font-size: 35px; /* Reduzido ainda mais para telas pequenas */
+                font-size: 35px; /* Tamanho do título ainda menor */
             }
 
             .Box1 {
-                font-size: 18px; /* Ajuste de fonte para telas pequenas */
-                margin-top: 20px;
                 width: 90%;
+                font-size: 18px;
+                margin-top: 20px;
             }
 
             .rodape {
@@ -166,6 +166,11 @@
             .flex-container {
                 flex-direction: column;
                 gap: 20px;
+            }
+
+            .barrafixa {
+                font-size: 28px;
+                padding-left: 15px;
             }
         }
     </style>
