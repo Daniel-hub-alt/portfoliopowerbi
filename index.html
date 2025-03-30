@@ -16,6 +16,7 @@
             align-items: center;
             justify-content: center;
             text-align: center;
+            color: white;
         }
 
         .barrafixa {
@@ -53,10 +54,10 @@
 
         .flex-container {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             gap: 20px;
-            flex-wrap: wrap;
             text-align: center;
         }
 
@@ -64,39 +65,23 @@
             border: 5px solid hwb(234 0% 71%);
             border-radius: 15px;
             box-shadow: 0 0 15px 5px hwb(234 0% 71%);
-            max-width: 100%;
-            height: auto;
-        }
-
-        #imagem1 {
             width: 100%;
             max-width: 950px;
-        }
-
-        #imagem2 {
-            width: 100%;
-            max-width: 500px;
-            margin-top: 150px;
-        }
-
-        .imagem-titulo {
-            width: 100%;
-            max-width: 1000px;
             height: auto;
         }
 
         .Box1 {
             width: 100%;
             max-width: 450px;
-            color: white;
             font-size: 22px;
             line-height: 1.4;
-            margin-top: 150px;
+            margin-top: 20px;
             text-align: center;
         }
 
         .Texto2 {
             font-size: 40px;
+            margin-bottom: 20px;
         }
 
         .rodape {
@@ -106,7 +91,6 @@
             text-align: center;
             font-size: 18px;
             padding: 15px 0;
-            font-family: Arial, sans-serif;
             margin-top: 50px;
         }
 
@@ -120,18 +104,7 @@
         /* Media Query para telas pequenas */
         @media (max-width: 768px) {
             h1 {
-                font-size: 40px; /* Reduzido o tamanho da fonte do título */
-            }
-
-            .flex-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .imagem, .imagem-titulo {
-                width: 100%;
-                height: auto;
+                font-size: 40px;
             }
 
             .Box1 {
@@ -139,45 +112,34 @@
                 font-size: 20px;
             }
 
-            #imagem1, #imagem2 {
-                width: 100%;
-                margin-top: 20px;
+            .flex-container {
+                flex-direction: column;
+                gap: 15px;
             }
 
-            .barrafixa {
-                font-size: 30px;
-                padding-left: 20px;
+            .imagem {
+                width: 100%;
+                max-width: 600px;
             }
         }
 
-        /* Media Query para telas ainda menores (exemplo: smartphones) */
         @media (max-width: 480px) {
             h1 {
-                font-size: 35px; /* Tamanho do título ainda menor */
+                font-size: 35px;
             }
 
             .Box1 {
                 width: 90%;
                 font-size: 18px;
-                margin-top: 20px;
             }
 
             .rodape {
                 font-size: 16px;
             }
 
-            #imagem1, #imagem2 {
+            .imagem {
                 width: 100%;
-            }
-
-            .flex-container {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .barrafixa {
-                font-size: 28px;
-                padding-left: 15px;
+                max-width: 100%;
             }
         }
     </style>
@@ -185,28 +147,28 @@
 <body>
     <div class="barrafixa">Portfólio Power BI</div>
     <h1>Portfólio de Projetos no Power BI</h1>
-    <p style="color: white; width: 700px; font-size: 22px; text-align: center;">Estou em constante aprendizado na área de análise de dados, desenvolvendo projetos no Power BI para criar dashboards interativos que facilitam a visualização e interpretação de informações. Busco aprimorar minhas habilidades e aplicar meus conhecimentos em diferentes setores.</p>
+    <p style="width: 700px; font-size: 22px;">Estou em constante aprendizado na área de análise de dados, desenvolvendo projetos no Power BI para criar dashboards interativos que facilitam a visualização e interpretação de informações. Busco aprimorar minhas habilidades e aplicar meus conhecimentos em diferentes setores.</p>
     <section id="sobre">
-        <img id="imagem1" class="imagem" src="https://addepto.com/wp-content/uploads/2022/05/background-images_www-3.webp" alt="Imagem Power BI">
+        <img class="imagem" src="https://addepto.com/wp-content/uploads/2022/05/background-images_www-3.webp" alt="Imagem Power BI">
         <div class="flex-container">
-            <img id="imagem2" class="imagem" src="https://www.finitetek.com/wp-content/uploads/2024/08/img1-1.jpg" alt="Imagem Power BI">
+            <img class="imagem" src="https://www.finitetek.com/wp-content/uploads/2024/08/img1-1.jpg" alt="Imagem Power BI">
             <div class="Box1">
                 <p>Portfólio de Projetos em Power BI - Dashboards de diversas áreas desenvolvidos para a tomada de decisão.</p>
                 <p>Essa página contém meus 3 Dashboards realizados:</p>
-                <p style="font-weight: bold; color: white;">Os Dashboards estão em formato de imagem, não é possível interagir.</p>
+                <p style="font-weight: bold;">Os Dashboards estão em formato de imagem, não é possível interagir.</p>
             </div>
         </div>
         <h1 class="Texto2">Dashboard de Gestão de Vendas</h1>
-        <p style="color: white; font-size: 22px; text-align: center; margin-bottom: 35px">Voltado para o monitoramento detalhado do desempenho de vendas, esse dashboard oferece informações sobre faturamento por método de pagamento, faturamento por loja, faturamento por período, além de uma análise detalhada de produtos, ticket médio e filtros interativos que permitem segmentações personalizadas.</p>
-        <img class="imagem-titulo" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Sem%20t%C3%ADtulo.jpg" alt="Imagem Power BI">
+        <p style="font-size: 22px; margin-bottom: 35px;">Voltado para o monitoramento detalhado do desempenho de vendas, esse dashboard oferece informações sobre faturamento por método de pagamento, faturamento por loja, faturamento por período, além de uma análise detalhada de produtos, ticket médio e filtros interativos que permitem segmentações personalizadas.</p>
+        <img class="imagem" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Sem%20t%C3%ADtulo.jpg" alt="Imagem Power BI">
 
         <h1 class="Texto2">Dashboard Comercial</h1>
-        <p style="color: white; font-size: 22px; text-align: center; margin-bottom: 35px">Focado em análise financeira e comercial, este painel apresenta a receita total, o número de clientes, a quantidade de produtos vendidos e o total de vendas por gênero. Com gráficos detalhados, permite uma visão clara da performance das vendas e auxilia na tomada de decisões estratégicas para impulsionar os resultados.</p>
-        <img class="imagem-titulo" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Relat%C3%B3rio%20Hasthtag.jpg" alt="Imagem Power BI">
+        <p style="font-size: 22px; margin-bottom: 35px;">Focado em análise financeira e comercial, este painel apresenta a receita total, o número de clientes, a quantidade de produtos vendidos e o total de vendas por gênero. Com gráficos detalhados, permite uma visão clara da performance das vendas e auxilia na tomada de decisões estratégicas para impulsionar os resultados.</p>
+        <img class="imagem" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Relat%C3%B3rio%20Hasthtag.jpg" alt="Imagem Power BI">
 
         <h1 class="Texto2">Dashboard da Netflix</h1>
-        <p style="color: white; font-size: 22px; text-align: center; margin-bottom: 35px">Esse dashboard analisa dados de assinantes da Netflix, trazendo uma visão clara sobre a distribuição dos planos de assinatura, os gêneros mais assistidos, o engajamento por região e a porcentagem de pagamentos atrasados. Através de visualizações intuitivas, é possível entender melhor o comportamento dos usuários e os padrões de consumo de conteúdo na plataforma.</p>
-        <img class="imagem-titulo" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Relat%C3%B3rio%203.jpg" alt="Imagem Power BI">
+        <p style="font-size: 22px; margin-bottom: 35px;">Esse dashboard analisa dados de assinantes da Netflix, trazendo uma visão clara sobre a distribuição dos planos de assinatura, os gêneros mais assistidos, o engajamento por região e a porcentagem de pagamentos atrasados. Através de visualizações intuitivas, é possível entender melhor o comportamento dos usuários e os padrões de consumo de conteúdo na plataforma.</p>
+        <img class="imagem" src="https://github.com/Daniel-hub-alt/portfoliopowerbi/raw/main/imagens/Relat%C3%B3rio%203.jpg" alt="Imagem Power BI">
         <footer class="rodape">
             <p>Site desenvolvido com</p>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5 Logo" class="logo">
